@@ -16,10 +16,6 @@
       'Content-Type': 'application/json',
     },
   })
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('ipResult').innerText = data.ip;
-  })
 }
 getIp();
 </script>
